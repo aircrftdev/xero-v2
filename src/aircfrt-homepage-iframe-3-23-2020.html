@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "title": "Aircrft"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+      @@if (sidebarSize == 'base' || demoMode) {
+        @@include("partials/sidebar.html", {
+          "category": "pages",
+          "subcategory": "project",
+          "page": "aircfrt-homepage-iframe-3-23-2020.html"
+        })
+      }
+      @@if (sidebarSize == 'small' || demoMode) {
+        @@include("partials/sidebar-sm.html", {
+          "category": "pages",
+          "subcategory": "project",
+          "page": "aircfrt-homepage-iframe-3-23-2020.html"
+        })
+      }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+      @@include("partials/topnav.html", {
+        "category": "pages",
+        "subcategory": "project",
+        "page": "aircfrt-homepage-iframe-3-23-2020.html"
+      })
+    }
+
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+        @@if (navPosition == 'combo' || demoMode) {
+          @@include("partials/topbar.html")
+        }
+  
+        <!-- HEADER -->
+        <div class="header">
+          <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+            
+            <!-- Body -->
+            <div class="header-body">
+              <div class="row align-items-center">
+                <div class="col-auto">
+  
+                  <!-- Avatar -->
+                  <div class="avatar avatar-lg avatar-4by3">
+                    <img src="assets/img/logo1.svg" alt="..." class="avatar-img rounded">
+                  </div>
+  
+                </div>
+                <div class="col ml-n3 ml-md-n2">
+                  
+                  <!-- Pretitle -->
+                  <h6 class="header-pretitle">
+                    The startup network
+                  </h6>
+  
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Weclome to aircrft
+                  </h1>
+  
+                </div>
+                <div class="col-12 col-md-auto mt-3 mt-md-0">
+                  
+                  <!-- Avatar group -->
+                  <div class="avatar-group">
+                    <a href="profile-posts.html" class="avatar" data-toggle="tooltip" title="Chai Forest">
+                      <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+                    </a>
+                    <a href="profile-posts.html" class="avatar" data-toggle="tooltip" title="Ab Hadley">
+                      <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                    </a>
+                    <a href="profile-posts.html" class="avatar" data-toggle="tooltip" title="Adolfo Hess">
+                      <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                    </a>
+                    <a href="profile-posts.html" class="avatar" data-toggle="tooltip" title="Daniela Dewitt">
+                      <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                    </a>
+                  </div>
+  
+                  <!-- Button -->
+                  <a href="#modalMembers" class="btn btn-lg btn-rounded-circle btn-white lift" data-toggle="modal">
+                    +
+                  </a>
+  
+                </div>
+              </div> <!-- / .row -->
+              
+            </div>
+  
+          </div>
+        </div> <!-- / .header -->
+  
+        <!-- CONTENT -->
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+          <div class="row">
+            <div class="col-12">
+  
+              <div class="embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://tina-starter-grande.netlify.com/" allowfullscreen></iframe>
+              </div>
+
+              <div class="embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://aircrftdev.com/blog-post.html" allowfullscreen></iframe>
+              </div>
+
+              <div class="embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://aircrftdev.com/blog-search.html" allowfullscreen></iframe>
+              </div>
+
+              <div class="embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://aircrftdev.com/blog.html" allowfullscreen></iframe>
+              </div>
+  
+            </div> 
+            
+             <!-- CONTENT -->
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+          <div class="row">
+            <div class="col-12">
+
+              <div class="embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://lyra.ghost.io/" allowfullscreen></iframe>
+              </div>
+  
+            </div>   
+        
+      </div> <!-- / .main-content -->
+  
+      <!-- JAVASCRIPT
+      ================================================== -->
+      @@include("partials/scripts.html")
+  
+    </body>
+  </html>

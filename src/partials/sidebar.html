@@ -1,0 +1,837 @@
+<nav class="navbar navbar-vertical fixed-left navbar-expand-md @@if(navColor=='default' && !demoMode){navbar-light}@@if(navColor=='inverted' &&!demoMode){}@@if(navColor=='vibrant' && !demoMode){navbar-dark bg-vibrant}" id="sidebar">
+  <div class="container-fluid">
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Brand -->
+    <a class="navbar-brand" href="index.html">
+      <img src="@@webRoot/assets/img/aircrft-logo-clean.png" class="navbar-brand-img 
+      mx-auto" alt="AIRCRFT"> 
+    </a>
+    <!-- <h6 class="navbar-heading"> 
+        THE STARTUP NETWORK
+    </h6> -->
+
+    <!-- User (xs) Added sticky nav on mobile - 5.7.2020 - Chai Forest -->
+    <div class="navbar-user d-md-none ">
+
+      <!-- Dropdown -->
+      <div class="dropdown">
+        
+        <!-- Toggle -->
+        <a href="#" id="sidebarIcon" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="avatar avatar-sm avatar-online">
+            <img src="@@webRoot/assets/img/logo.png" class="avatar-img rounded-circle" alt="AIRCRFT">
+          </div>
+        </a>
+
+        <!-- Menu -->
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="sidebarIcon">
+          <a href="profile-posts.html" class="dropdown-item">Profile</a>
+          <a href="settings.html" class="dropdown-item">Settings</a>
+          <hr class="dropdown-divider">
+          <a href="sign-in.html" class="dropdown-item">Logout</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="sidebarCollapse">
+
+      <!-- Form -->
+      <form class="mt-4 mb-3 d-md-none">
+        <div class="input-group input-group-rounded input-group-merge">
+          <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <span class="fe fe-search"></span>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!-- Heading - Main Menu Starts Here Chai 
+      <h6 class="navbar-heading"> 
+        THE STARTUP NETWORK
+      </h6> -->
+
+      <!-- Navigation -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link @@if(page=='#'){active}" href="#">
+              <i class="icon text-primary fe fe-feather"></i> <span class="text-primary">Flight Deck</span> <span class="badge badge-soft-primary ml-auto">Console</span> 
+              </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {active}" href="#modalFoundersFeeed2" data-toggle="modal"> <i class="icon text-primary fe fe-sliders"></i> <span class="text-primary">Uplift Algorithm</span> <!-- <span class="badge badge-soft-primary ml-auto">Console</span> -->
+              </a>
+          </li>
+        <li class="nav-item">
+            <a class="nav-link {active}" href="#modalFoundersFeed1" data-toggle="modal">
+              <i class="icon text-primary fe fe-activity"></i> <span class="text-primary">Founder Feeds</span> <span class="badge badge-soft-success ml-auto">LIVE</span> 
+              </a>
+          </li>  
+        <!-- <li class="nav-item">
+             <a class="nav-link @@if(page=='founders-feed.html'){active}" href="#sidebarModalActivity" data-toggle="modal>
+             <i class="fe fe-activity"></i> Founder feeds <span class="badge badge-soft-success ml-auto">LIVE</span>
+             </a>
+          </li> -->
+        <li class="nav-item">
+            <a class="nav-link {active}" href="#modalStartupSpotlight1" data-toggle="modal">
+              <i class="icon text-primary fe fe-battery-charging"></i> <span class="text-primary">Startup Spotlight</span> <span class="badge badge-soft-danger ml-auto">New</span> 
+              </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link @@if(page=='flightdeck-4-11-2020.html'){active}" href="flightdeck-4-11-2020.html">
+              <i class="icon text-primary fe fe-cpu"></i> <span class="text-primary">Dream Teams + Jobs</span>
+              <!-- <span class="badge badge-soft-warning ml-auto">Seach & Apply</span> -->
+            </a>
+          </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link @@if(page=='jobs.html'){active}" href="#">
+            <i class="icon text-primary fe fe-message-square"></i> <span class="text-primary">Channels</span>
+               <span class="badge badge-soft-warning ml-auto">S</span> 
+            </a>
+          </li> -->
+        <!-- <li class="nav-item">
+            <a class="nav-link @@if(page=='jobs.html'){active}" href="#">
+              <i class="icon text-primary fe fe-paperclip"></i> <span class="text-primary">Jobs</span> <span class="badge badge-soft-warning ml-auto">Search + Apply</span>
+              </a>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link {active}" href="#modalKanbanTask" data-toggle="modal">
+              <i class="icon text-primary fe fe-battery-charging"></i> <span class="text-primary">Modal Popup Test</span> <span class="badge badge-soft-danger ml-auto">New</span> 
+              </a>
+          </li> -->                         
+        <!--<li class="nav-item">
+            <a class="nav-link @@if(page=='team-channels.html'){active}" href="#">
+            <i class="fe fe-award"></i> Showcase <span class="badge badge-soft-primary ml-auto">Online Event</span> 
+            </a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#sidebarDashboards" data-toggle="collapse" role="button" aria-expanded="@@if(category=='dashboards'){true}@@if(category!=='dashboards'){false}" aria-controls="sidebarDashboards"> 
+            <i class="fe fe-activity"></i> Founder Feeds <span class="badge badge-soft-success ml-auto">LIVE</span> 
+          </a>
+          <div class="collapse @@if(category=='dashboards'){show}" id="sidebarDashboards">
+            <ul class="nav nav-sm flex-column">
+              <li class="nav-item">
+                <a href="sites.html" class="nav-link @@if(page=='sites.html'){active}">
+                  Aircrft feed
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="myaircrft-chaiforest.html" class="nav-link @@if(page=='myaircrft-chaiforest.html'){active}">
+                  Founders feed
+                </a>
+              </li>
+            </li>
+            <li class="nav-item">
+              <a href="aircrft-flightpath.html" class="nav-link @@if(page=='aircrft-flightpath.html'){active}">
+                Startup feed 
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="site-iframe-demo-1.html" class="nav-link @@if(page=='site-iframe-demo-1.html'){active}">
+                Jobs feed
+              </a>
+            </li>
+            </ul>
+          </div>
+        </li> -->
+        <!-- <li class="nav-item">
+         <a class="nav-link" href="#sidebarDashboards" data-toggle="collapse" role="button" aria-expanded="@@if(category=='dashboards'){true}@@if(category!=='dashboards'){false}" aria-controls="sidebarDashboards">
+          <i class="fe fe-credit-card"></i> Kanbans
+         </a>
+          <div class="collapse @@if(category=='dashboards'){show}" id="sidebarDashboards">
+            <ul class="nav nav-sm flex-column">
+              <li class="nav-item">
+                <a href="kanban-founders.html" class="nav-link @@if(page=='kanban-founders.html'){active}">
+                    Founders
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="kanban-startups.html" class="nav-link @@if(page=='kanban-startups.html'){active}">
+                  Startups
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="guest-curated.html" class="nav-link @@if(page=='guest-curated.html'){active}">
+                  Guest curated 
+                </a>
+              </li>
+            </ul>
+          </div> -->         
+        </li>
+       </li>
+          
+      </ul> 
+
+      <!-- Divider -->
+      <hr class="navbar-divider my-3">
+
+      <!-- Heading 
+      <h6 class="navbar-heading">
+        CONTENT
+      </h6> -->
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link @@if(page=='jobs.html'){active}" href="#">
+            <i class="icon text-primary fe fe-bar-chart"></i> <span class="text-primary">Startup Funding</span> <!--<span class="badge badge-soft-success ml-auto">$</span>-->
+            </a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link @@if(page=='jobs.html'){active}" href="#">
+            <i class="icon text-primary fe fe-paperclip"></i> <span class="text-primary">Jobs</span> <span class="badge badge-soft-warning ml-auto">Search + Apply</span>
+            </a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link @@if(page=='jobs.html'){active}" href="#">
+            <i class="icon text-primary fe fe-message-square"></i> <span class="text-primary">Founders circles</span> <span class="badge badge-soft-warning ml-auto">S</span>
+            </a>
+        </li> -->
+        <!-- <li class="nav-item">
+            <a class="nav-link @@if(page=='flightdeck-4-11-2020.html'){active}" href="flightdeck-4-11-2020.html">
+              <i class="icon text-primary fe fe-cpu"></i> <span class="text-primary">Tools & Supplies</span> <span class="badge badge-soft-warning ml-auto">Essentials</span> 
+              </a>
+          </li> -->
+        <li class="nav-item">
+          <a class="nav-link @@if(page=='jobs.html'){active}" href="#">
+            <i class="icon text-primary fe fe-git-branch"></i> <span class="text-primary"> Tools + Supply</span> <span class="badge badge-soft-dark ml-auto">Startup Shop</span>
+          </a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link @@if(page=='jobs.html'){active}" href="#">
+            <i class="icon text-primary fe fe-server"></i> <span class="text-primary">Office hours</span> <span class="badge badge-soft-warning ml-auto">S</span>
+            </a>
+        </li> -->
+        <!--<li class="nav-item">
+          <a class="nav-link @@if(page=='jobs.html'){active}" href="#">
+            <i class="icon text-primary fe fe-paperclip"></i> <span class="text-primary">Remote teams</span> <span class="badge badge-soft-warning ml-auto">S</span>
+            </a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#sidebarAuth" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">
+            <i class="icon text-primary fe fe-users"></i> </i> <span class="text-primary">Remote teams</span>
+          </a>
+          <div class="collapse" id="sidebarAuth">
+            <ul class="nav nav-sm flex-column">
+              <li class="nav-item">
+                <li class="nav-item">
+                  <a href="pricing.html" class="nav-link">
+                    Team chat channels
+                  </a>
+                <li class="nav-item">
+                  <a href="sign-in-illustration.html" class="nav-link">
+                    Always-on video team meeting rooms
+                  </a>
+                <li class="nav-item">
+                  <a href="sign-up-illustration.html" class="nav-link">
+                    Video chat app - embed on site/app
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="sign-up-illustration.html" class="nav-link">
+                    Office hours
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="password-reset-illustration.html" class="nav-link">
+                    Remote work best practices
+                  </a>
+              </li>
+            </ul>
+          </div>
+        </li> -->   
+        <!--<li class="nav-item">
+          <a class="nav-link @@if(page=='podcast.html'){active}" href="#">
+            <i class="fe fe-umbrella"></i> Uplift algorithm <span class="badge badge-soft-secondary ml-auto">Latest</span>
+            </a> 
+        </li> 
+        <li class="nav-item">
+           <a class="nav-link @@if(page=='getting-started.html'){active}" href="getting-started.html">
+           <i class="fe fe-moon"></i> Culture Decks
+         <span class="badge badge-soft-success ml-auto">Northstar</span>
+      </a>
+      </li> 
+    </li>
+        <li class="nav-item">
+          <a class="nav-link @@if(page=='flight-path.html'){active}" href="http://flightpath.aircrft.com/">
+            <i class="fe fe-git-branch
+            "></i> Flight path <span class="badge badge-soft-info ml-auto">Blog</span>
+            </a>
+        </li> -->
+        <!--<li class="nav-item d-md-none">
+          <a class="nav-link" href="#sidebarModalActivity" data-toggle="modal">
+           <span class="fe fe-bell"></span> Notifications
+          </a>
+        </li>-->
+      </ul>
+
+      <!-- Divider -->
+      <hr class="navbar-divider my-3">
+
+      <!-- Heading 
+      <h6 class="navbar-heading">
+        RESOURCES
+      </h6> -->
+
+      <!-- Navigation -->
+      <ul class="navbar-nav mb-md-4">
+        <!-- <li class="nav-item">
+          <a class="nav-link @@if(page=='jobs.html'){active}" href="#">
+            <i class="icon text-primary fe fe-paperclip"></i> <span class="text-primary">Jobs</span> <span class="badge badge-soft-warning ml-auto">Search + Apply</span>
+          </a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link @@if(page=='jobs.html'){active}" href="#">
+            <i class="icon text-primary fe fe-message-square"></i> <span class="text-primary">Channels</span>
+              <span class="badge badge-soft-warning ml-auto">S</span> -->
+          </a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link @@if(page=='podcast.html'){active}" href="#">
+            <i class="icon text-primary fe fe-video"></i> <span class="text-primary">Workshops</span> <span class="badge badge-soft-secondary ml-auto">Growth mindset</span> 
+          </a>
+        </li> -->
+        <!-- <li class="nav-item">
+            <a class="nav-link @@if(page=='jobs.html'){active}" href="#">
+              <i class="icon text-primary fe fe-message-square"></i> <span class="text-primary">Founders circles</span> <span class="badge badge-soft-warning ml-auto">S</span> 
+              </a>
+          </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#remoteTeams" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="remoteTeams">
+            <i class="icon text-primary fe fe-users"></i> </i> <span class="text-primary">Remote teams</span>
+          </a>
+          <div class="collapse" id="remoteTeams">
+            <ul class="nav nav-sm flex-column">
+              <li class="nav-item">
+                <li class="nav-item">
+                  <a href="pricing.html" class="nav-link">
+                    Team chat channels
+                  </a>
+                <li class="nav-item">
+                  <a href="sign-in-illustration.html" class="nav-link">
+                    Always-on team video meeting rooms
+                  </a>
+                <li class="nav-item">
+                  <a href="sign-up-illustration.html" class="nav-link">
+                    Video chat app - embed on site/app
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="sign-up-illustration.html" class="nav-link">
+                    Office hours
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="password-reset-illustration.html" class="nav-link">
+                    Remote work best practices
+                  </a>
+              </li>
+            </ul>
+          </div>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link @@if(page=='podcast.html'){active}" href="#">
+            <i class="icon text-primary fe fe-mic"></i> <span class="text-primary">Flight path</span> <span class="badge badge-soft-secondary ml-auto">Podcast</span>
+          </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @@if(page=='flight-path.html'){active}" href="#">
+              <i class="icon text-primary fe fe-edit-3
+              "></i> <span class="text-primary">Blog</span> <span class="badge badge-soft-info ml-auto">Magazine</span> 
+              </a>
+          </li> -->
+        <!-- <li class="nav-item">
+            <a class="nav-link @@if(page=='podcast.html'){active}" href="#">
+              <i class="icon text-primary fe fe-credit-card"></i> <span class="text-primary">Kanbans</span> <span class="badge badge-soft-secondary ml-auto">Latest</span> 
+            </a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link @@if(page=='tactics.html'){active}" href="#">
+            <i class="icon text-primary fe fe-git-branch"></i> <span class="text-primary">Strategies</span>
+          </a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link @@if(page=='tools.html'){active}" href="#">
+            <i class="icon text-primary fe fe-sliders"></i> <span class="text-primary">Toolbox</span>
+          </a>
+        </li> -->
+        <!-- <li class="nav-item">
+            <a class="nav-link @@if(page=='tools.html'){active}" href="#">
+              <i class="icon text-primary fe fe-clipboard"></i> <span class="text-primary">Manuals</span>
+            </a>
+          </li> -->
+     <!-- <div class="collapse @@if(category=='components'){show}" id="sidebarComponents">
+            <ul class="nav nav-sm flex-column">
+              <li class="nav-item">
+                <a href="components.html#alerts" class="nav-link">
+                  Alerts
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#autosizePlugin" class="nav-link">
+                  Autosize
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#avatars" class="nav-link">
+                  Avatars
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#badges" class="nav-link">
+                  Badges
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#breadcrumb" class="nav-link">
+                  Breadcrumb
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#buttons" class="nav-link">
+                  Buttons
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#button-group" class="nav-link">
+                  Button group
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#cards" class="nav-link">
+                  Cards
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#charts" class="nav-link">
+                  Charts
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#dropdowns" class="nav-link">
+                  Dropdowns
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#forms" class="nav-link">
+                  Forms
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#icons" class="nav-link">
+                  Icons
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#kanban" class="nav-link">
+                  Kanban
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#lists" class="nav-link">
+                  Lists
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#map" class="nav-link">
+                  Map
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#modal" class="nav-link">
+                  Modal
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#navs" class="nav-link">
+                  Navs
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#navbarExample" class="nav-link">
+                  Navbar
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#page-headers" class="nav-link">
+                  Page headers
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#pagination" class="nav-link">
+                  Pagination
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#popovers" class="nav-link">
+                  Popovers
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#progress" class="nav-link">
+                  Progress
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#social-posts" class="nav-link">
+                  Social post
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#spinners" class="nav-link">
+                  Spinners
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#tables" class="nav-link">
+                  Tables
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#toasts" class="nav-link">
+                  Toasts
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#tooltips" class="nav-link">
+                  Tooltips
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#typography" class="nav-link">
+                  Typography
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#utilities" class="nav-link">
+                  Utilities
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>-->
+        <li class="nav-item">
+          <a class="nav-link" href="#sidebarAuth" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">
+          <i class="icon text-primary fe fe-hard-drive"></i> </i> <span class="text-primary">Resources</span> <!-- <span class="badge badge-soft-secondary ml-auto">Flight kit</span> -->
+          </a>
+          <div class="collapse" id="sidebarAuth">
+            <ul class="nav nav-sm flex-column">
+              <li class="nav-item">
+                <li class="nav-item">
+                  <a href="#" class="nav-link"><span class="text">WORKSHOPS</span>
+                  </a>
+              <li class="nav-item">
+                  <a href="#" class="nav-link"><span class="text-dark">MANUALS</span>
+                  </a> 
+              <!-- li class="nav-item">
+                  <a href="#" class="nav-link"><span class="text">FLIGHT PATH PODCAST</span>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"><span class="text">FLASH BRIEFINGS</span>
+                  </a>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"><span class="text">AIRCRFT UPLIFT ALGORITHM</span>
+                  </a>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"><span class="text">CONSCIOUS LEADERSHIP</span> 
+                  </a>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"><span class="text">CRAFT YOUR CULTURE DECK</span>
+                  </a>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"><span class="text">CULTURE DECKS</span>
+                  </a> 
+                <li class="nav-item">
+                  <a href="#" class="nav-link"><span class="text">UPLIFT ALGORITHM</span>
+                  </a> 
+                <li class="nav-item">
+                  <a href="#" class="nav-link"><span class="text">PODCAST</span>
+                  </a>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"><span class="text">blog</span>
+                  </a>
+                </li> -->
+            </ul>
+          </div>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link @@if(page=='flightdeck-4-11-2020.html'){active}" href="flightdeck-4-11-2020.html">
+            <i class="icon text-primary fe fe-feather"></i> <span class="text-primary">Uplift Algorithm</span>
+            <span class="badge badge-soft-primary ml-auto">Dashboard</span> 
+          </a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link @@if(page=='podcast.html'){active}" href="#">
+            <i class="icon text-primary fe fe-mic"></i> <span class="text-primary">Flight path</span> <span
+              class="badge badge-soft-warning ml-auto">Podcast</span>
+          </a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link @@if(page=='flight-path.html'){active}" href="#">
+            <i class="icon text-primary fe fe-edit-3
+                      "></i> <span class="text-primary">Blog</span>
+            <span class="badge badge-soft-info ml-auto">Magazine</span>
+          </a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#sidebarLibrary" data-toggle="collapse" role="button" aria-expanded="@@if(category=='library'){true}@@if( category!=='library'){false}" aria-controls="sidebarLibrary">
+            <i class="icon text-primary fe fe-book-open"></i> <span class="text-primary">Library</span>
+          </a>
+        <div class="collapse @@if(category=='library'){show}" id="sidebarLibrary">
+            <ul class="nav nav-sm flex-column">
+              <li class="nav-item">
+                <a href="library.html#alerts" class="nav-link">
+                  Alerts
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#autosizePlugin" class="nav-link">
+                  Autosize
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#avatars" class="nav-link">
+                  Avatars
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#badges" class="nav-link">
+                  Badges
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#breadcrumb" class="nav-link">
+                  Breadcrumb
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#buttons" class="nav-link">
+                  Buttons
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#button-group" class="nav-link">
+                  Button group
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#cards" class="nav-link">
+                  Cards
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#charts" class="nav-link">
+                  Charts
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#dropdowns" class="nav-link">
+                  Dropdowns
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#forms" class="nav-link">
+                  Forms
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#icons" class="nav-link">
+                  Icons
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#kanban" class="nav-link">
+                  Kanban
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#lists" class="nav-link">
+                  Lists
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#map" class="nav-link">
+                  Map
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#modal" class="nav-link">
+                  Modal
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#navs" class="nav-link">
+                  Navs
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#navbarExample" class="nav-link">
+                  Navbar
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#page-headers" class="nav-link">
+                  Page headers
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#pagination" class="nav-link">
+                  Pagination
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#popovers" class="nav-link">
+                  Popovers
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#progress" class="nav-link">
+                  Progress
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#social-posts" class="nav-link">
+                  Social post
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#spinners" class="nav-link">
+                  Spinners
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#tables" class="nav-link">
+                  Tables
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#toasts" class="nav-link">
+                  Toasts
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#tooltips" class="nav-link">
+                  Tooltips
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#typography" class="nav-link">
+                  Typography
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="components.html#utilities" class="nav-link">
+                  Utilities
+                </a>
+              </li>
+            </ul>
+          </div> 
+        </li> -->
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="#sidebarAuth" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">
+              <i class="icon text-primary fe fe-settings"></i> </i> <span class="text-primary">Toolbox</span>
+            </a>
+            <div class="collapse" id="sidebarAuth">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <li class="nav-item">
+                    <a href="memberships.html" class="nav-link">
+                      Startup tools
+                    </a>
+                  <li class="nav-item">
+                    <a href="sign-in-illustration.html" class="nav-link">
+                      Dev + code
+                    </a>
+                  <li class="nav-item">
+                    <a href="sign-up-illustration.html" class="nav-link">
+                      Content production
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="password-reset-illustration.html" class="nav-link">
+                      Con
+                    </a>
+                </li>
+              </ul>
+            </div>
+          </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link @@if(page=='podcast.html'){active}" href="#">
+            <i class="icon text-primary fe fe-mic"></i> <span class="text-primary">Flight path</span> <span
+              class="badge badge-soft-warning ml-auto">Podcast</span>
+          </a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link @@if(page=='flight-path.html'){active}" href="#">
+            <i class="icon text-primary fe fe-edit-3"></i> <span class="text-primary">Blog</span>
+             <span class="badge badge-soft-info ml-auto">Magazine</span>
+          </a>
+        </li> -->
+
+      </ul> 
+
+      <!-- Divider 
+      <hr class="navbar-divider my-3"> -->
+
+      <!-- Push content down -->
+      <div class="mt-auto"></div>
+      
+      @@if (demoMode) {
+      <!-- Customize -->
+      <a href="#modalAllAccessPass1" class="btn btn-block btn-primary mb-4" data-toggle="modal">
+        <i class="fe fe-sliders mr-2"></i> All-Access Pass
+      </a>
+      }
+      
+      @@if (navPosition == 'sidenav') {
+      <!-- User (md) -->
+      <div class="navbar-user d-none d-md-flex" id="sidebarUser">
+        
+        <!-- Icon -->
+        <a href="#sidebarModalActivity" class="navbar-user-link" data-toggle="modal">
+          <span class="icon">
+            <i class="fe fe-bell"></i>
+          </span>
+        </a>
+
+        <!-- Dropup -->
+        <div class="dropup">
+          
+          <!-- Toggle -->
+          <a href="#" id="sidebarIconCopy" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="avatar avatar-sm avatar-online">
+              <img src="@@webRoot/assets/img/aircrft-logo-3.png" class="avatar-img rounded-circle" alt="...">
+            </div>
+          </a>
+
+          <!-- Menu 
+          <div class="dropdown-menu" aria-labelledby="sidebarIconCopy">
+            <a href="memberships.html" class="dropdown-item">Memberships</a>
+            <a href="settings.html" class="dropdown-item">Account Settings</a>
+            <hr class="dropdown-divider">
+            <a href="sign-in.html" class="dropdown-item">Logout</a>
+          </div> -->
+
+        </div>
+
+        <!-- Icon -->
+        <a href="#sidebarModalSearch" class="navbar-user-link" data-toggle="modal">
+          <span class="icon">
+            <i class="fe fe-search"></i>
+          </span>
+        </a>
+
+      </div>
+      }
+
+    </div> <!-- / .navbar-collapse -->
+
+  </div>
+</nav>

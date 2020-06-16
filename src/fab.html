@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    @@include("partials/head.html", {
+    "title": "Aircrft Floating Action Button"
+    })
+</head>
+
+<body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-subscribers.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-subscribers.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-subscribers.html"
+    })
+    }
+
+    <!-- FAB
+    ================================================== -->
+
+    <h1>Floating Action Button (FAB)</h1>
+    <div class="fab-container">
+        <div class="fab-icon-holder">
+            <i class="icon text-light fe fe-feather"></i>
+        </div>
+
+        <ul class="fab-options">
+            <li>
+                <span class="fab-label">Documentaion</span>
+                <div class="fab-icon-holder">
+                <i class="icon text-light fe fe-book-open"></i>
+                </div>
+            </li>
+            <li>
+                <span class="fab-label">Video Tutorials</span>
+                <div class="fab-icon-holder">
+                <i class="icon text-light fe fe-video"></i>
+                </div>
+            </li>
+            <li>
+                <span class="fab-label">Live Chat</span>
+                <div class="fab-icon-holder">
+                <i class="icon text-light fe fe-message-square"></i>
+                </div>
+            </li>
+            <li>
+                <span class="fab-label">Feedback</span>
+                <div class="fab-icon-holder">
+                <i class="icon text-light fe fe-check-circle"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+</body>
+
+</html>
